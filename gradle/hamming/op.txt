@@ -1,0 +1,19 @@
+Output :
+Enter 4 bits of data one by one
+1
+0
+1
+1
+Encoded data is
+1010101
+Enter received data bits one by one
+1
+0
+1
+0
+1
+0
+1
+No error while transmission of data
+Process returned 0 (0x0)   execution time : 29.602 s
+Press any key to continue.

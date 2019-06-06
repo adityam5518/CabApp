@@ -1,0 +1,18 @@
+Server Output :-
+rebel on Mon Sep 24 at 09:22 AM in ~/Say Hello  
+>> gcc Server.c -o server
+rebel on Mon Sep 24 at 09:22 AM in ~/Say Hello  
+>> ./server
+Hello from client
+Hello message sent
+
+
+
+Client Output :-
+rebel on Mon Sep 24 at 09:22 AM in ~/Say Hello  
+>> gcc Client.c -o client
+rebel on Mon Sep 24 at 09:23 AM in ~/Say Hello  
+>> ./client
+Hello message sent
+Hello from server
+

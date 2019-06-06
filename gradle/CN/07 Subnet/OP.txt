@@ -1,0 +1,103 @@
+Output :-
+System IP Address : 192.168.56.1
+Enter URL : 
+https://www.youtube.com/
+Public IP Address: Cannot Execute Properly
+
+
+
+-----------------------------------------------------------
+
+
+
+Output :-
+Enter the ip address=192.168.56.1
+The binary IpAddress is=11000000101010000011100000000001
+Enter the number of address
+12
+The number of bits required=4
+Subnet mask is 28
+Group 1 
+The First Address is:
+192.168.56.0
+The Last Address is:
+192.168.56.15
+How many subnets do you want to form?
+12
+ GROUP 2 FIRST ADDRESS:
+192.168.56.16
+ GROUP 2 LAST ADDRESS:
+192.168.56.31
+
+ GROUP 3 FIRST ADDRESS:
+192.168.56.32
+ GROUP 3 LAST ADDRESS:
+192.168.56.47
+
+ GROUP 4 FIRST ADDRESS:
+192.168.56.48
+ GROUP 4 LAST ADDRESS:
+192.168.56.63
+
+ GROUP 5 FIRST ADDRESS:
+192.168.56.64
+ GROUP 5 LAST ADDRESS:
+192.168.56.79
+
+ GROUP 6 FIRST ADDRESS:
+192.168.56.80
+ GROUP 6 LAST ADDRESS:
+192.168.56.95
+
+ GROUP 7 FIRST ADDRESS:
+192.168.56.96
+ GROUP 7 LAST ADDRESS:
+192.168.56.111
+
+ GROUP 8 FIRST ADDRESS:
+192.168.56.112
+ GROUP 8 LAST ADDRESS:
+192.168.56.127
+
+ GROUP 9 FIRST ADDRESS:
+192.168.56.128
+ GROUP 9 LAST ADDRESS:
+192.168.56.143
+
+ GROUP 10 FIRST ADDRESS:
+192.168.56.144
+ GROUP 10 LAST ADDRESS:
+192.168.56.159
+
+ GROUP 11 FIRST ADDRESS:
+192.168.56.160
+ GROUP 11 LAST ADDRESS:
+192.168.56.175
+
+ GROUP 12 FIRST ADDRESS:
+192.168.56.176
+ GROUP 12 LAST ADDRESS:
+192.168.56.191
+
+Enter the Ip address to ping=
+172.16.0.1
+The ip address is not reachable 172.16.0.1
+
+
+--------------------------------------------------------
+
+Output :-
+
+enter ip address
+192.168.56.1
+enter mask
+24
+192 168 56 1 
+CLASS C
+IP in binary : 11000000101010000011100000000001
+Default Mask : 24
+11111111111111111111111100000000
+11000000101010000011100000000000
+Given IP : 192.168.56.1
+subnet mask :255.255.255.0
+NetId : 192.168.56.0

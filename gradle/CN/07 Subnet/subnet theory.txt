@@ -1,0 +1,12 @@
+SubNetting -
+The process of subnetting involves dividing a network up into smaller networks called subnets or sub networks. Each of these subnets has its own specific address. To create these additional networks we use a subnet mask. The subnet mask simply determines which portion of the IP address belongs to the host. The subnet address is created by dividing the host address into network address and host address.
+		The network address specifies the type of subnetwork in the network and the host address specifies the host of that subnet. Subnets are under local administration. As such, the outside world sees an organization as a single network and has no detailed knowledge of the organization's intema1 structure. Subnetting provides the network administrator with several benefits, including extra flexibility, more efficient use of network address and the capability to contain broadcast traffic. A given .network address can be broken up into may subnetworks. For example, 172.16.1.0, 172.16.2.0, 172.16.3.0 and 172.16.4.0 are all subnets within network 171.16.0.0.
+		A subnet address is created by. borrowing bits from the host field and designating them as subnet field. The number of bits borrowed varies and is specified by the subnet mask. Fig. shows how bits are borrowed from the host address field to create the subnet address field.
+
+ Subnet Mask - What is Subnet Mask?
+• Subnet mask uses the same format and representation technique as IP addresses.
+• Subnet mask has binary is in all bits specifying the network and subnetwork fields, and binary Os in all bits specifying the host field.
+• A subnet address is created by borrowing the bits from host field.
+• Subnet mask bits should come from the high-order (left most) bits of the host field.
+• Various types of subnet mask exist for class Band C subnets.
+• The default subnet mask for a class B address that has no subnetting is 255.255.0.0, while the subnet mask for a class B address 171.16.0.0 that specifies eight bits of subnetting is 255.255.255.0. The reason for this is that eight bits of subnetting or 28 - 2 (1 for the network address and 1 for the broadcast address) = 254 subnets possible, with 28 - 2 = 254 hosts per subnet.

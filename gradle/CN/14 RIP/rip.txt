@@ -1,0 +1,40 @@
+ Routing Information Protocol - 
+ 
+RIP (Routing Information Protocol) 
+ 
+RIP is a standardized Distance Vector protocol, designed for use on smaller networks. RIP was one of the first true Distance Vector routing protocols, and is supported on a wide variety of systems. 
+ 
+RIP adheres to the following Distance Vector characteristics: 
+ • RIP sends out periodic routing updates (every 30 seconds) • RIP sends out the full routing table every periodic update • RIP uses a form of distance as its metric (in this case, hopcount) • RIP uses the Bellman-Ford Distance Vector algorithm to determine the best “path” to a particular destination 
+ 
+Other characteristics of RIP include: 
+ • RIP supports IP and IPX routing. • RIP utilizes UDP port 520 • RIP routes have an administrative distance of 120. • RIP has a maximum hopcount of 15 hops. 
+ 
+Any network that is 16 hops away or more is considered unreachable to RIP, thus the maximum diameter of the network is 15 hops. A metric of 16 hops in RIP is considered a poison route or infinity metric. 
+ 
+If multiple paths exist to a particular destination, RIP will load balance between those paths (by default, up to 4) only if the metric (hopcount) is equal. RIP uses a round-robin system of load-balancing between equal metric routes, which can lead to pinhole congestion.  
+ 
+For example, two paths might exist to a particular destination, one going through a 9600 baud link, the other via a T1. If the metric (hopcount) is equal, RIP will load-balance, sending an equal amount of traffic down the 9600 baud link and the T1. This will (obviously) cause the slower link to become congested. 
+ 
+ 
+
+* * * All original material copyright © 2012 by Aaron Balchunas (aaron@routeralley.com), unless otherwise noted.  All other material copyright © of their respective owners.  This material may be copied and used freely, but may not be altered or sold without the expressed written consent of the owner of the above copyright. Updated material may be found at http://www.routeralley.com. 
+2 
+RIP Versions 
+ 
+RIP has two versions, Version 1 (RIPv1) and Version 2 (RIPv2). 
+ 
+RIPv1 (RFC 1058) is classful, and thus does not include the subnet mask with its routing table updates. Because of this, RIPv1 does not support Variable Length Subnet Masks (VLSMs). When using RIPv1, networks must be contiguous, and subnets of a major network must be configured with identical subnet masks. Otherwise, route table inconsistencies (or worse) will occur. 
+ 
+RIPv1 sends updates as broadcasts to address 255.255.255.255. 
+ 
+RIPv2 (RFC 2543) is classless, and thus does include the subnet mask with its routing table updates. RIPv2 fully supports VLSMs, allowing discontiguous networks and varying subnet masks to exist. 
+ 
+Other enhancements offered by RIPv2 include: • Routing updates are sent via multicast, using address 224.0.0.9 • Encrypted authentication can be configured between RIPv2 routers • Route tagging is supported (explained in a later section) 
+ 
+RIPv2 can interoperate with RIPv1. By default: • RIPv1 routers will sent only Version 1 packets • RIPv1 routers will receive both Version 1 and 2 updates • RIPv2 routers will both send and receive only Version 2 updates 
+ 
+We can control the version of RIP a particular interface will “send” or “receive.” 
+ 
+Unless RIPv2 is manually specified, a Cisco will default to RIPv1 when configuring RIP
+

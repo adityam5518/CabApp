@@ -1,0 +1,9 @@
+1.sudo apt-get install isc-dhcp-server
+
+2.sudo vim /etc/default/isc-dhcp-server
+
+3.sudo vim /etc/dhcp/dhcpd.conf
+
+4.sudo service isc-dhcp-server restart
+
+5.sudo netstat -uap

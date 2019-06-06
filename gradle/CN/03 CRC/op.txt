@@ -1,0 +1,35 @@
+
+
+/* OUTPUT
+
+
+ Enter Frame size: 6
+
+ Enter Frame:1
+0
+0
+1
+0
+0
+
+ Enter Generator size: 4
+
+ Enter Generator:1
+1
+0
+1
+
+ Sender Side:
+ Frame: 100100
+ Generator :1101
+ Number of 0's to be appended: 3
+ Message after appending 0's :100100000
+ CRC bits: 001
+ Transmitted Frame: 100100001
+ Receiver side :
+ Received Frame: 100100001
+ Reaminder: 000
+ Since Remainder Is 0 Hence Message Transmitted From Sender To Receriver Is Corr
+ect
+
+*/

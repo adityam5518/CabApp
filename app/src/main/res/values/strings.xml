@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NewLogin</string>
+    <string name="verify">Verify otp</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="check_available_cars_on_rent">Check available cars on Rent</string>
+    <string name="share_your_valuable_feedback">Share Your Valuable Feedback</string>
+    <string name="emailEditText">Enter Your Email here:</string>
+    <string name="sendButton">Submit</string>
+    <string name="messageEdittext">Please Enter Your Message:</string>
+    <string name="contactusq">Write to Us for any Queries</string>
+    <string name="contactus">Contact Us</string>
+    <string name="aboutus">About Us</string>
+    <string name="our_team">Our Team</string>
+    <string name="reg">New User? Register Here</string>
+    <string name="find_nearest_stations">Find Nearest Stations</string>
+    <string name="locate_nearest_pickup_and_drop_station">Locate nearest pickup and drop station</string>
+    <string name="textview">User Registration Form</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

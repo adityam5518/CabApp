@@ -1,0 +1,23 @@
+Why Selective Repeat Protocol?
+The go-back-n protocol works well if errors are less, but if the line is poor it wastes a lot of bandwidth on retransmitted frames. An alternative strategy, the selective repeat protocol, is to allow the receiver to accept and buffer the frames following a damaged or lost one.
+
+Selective Repeat attempts to retransmit only those packets that are actually lost (due to errors) :
+Receiver must be able to accept packets out of order.
+Since receiver must release packets to higher layer in order, the receiver must be able to buffer some packets.
+
+
+Selective Repeat Protocol (SRP) :
+This protocol(SRP) is mostly identical to GBN protocol, except that buffers are used and the receiver, and the sender, each maintain a window of size. SRP works better when the link is very unreliable. Because in this case, retransmission tends to happen more frequently, selectively retransmitting frames is more efficient than retransmitting all of them. SRP also requires full duplex link. backward acknowledgements are also in progress.
+
+Sender’s Windows ( Ws) = Receiver’s Windows ( Wr).
+Window size should be less than or equal to half the sequence number in SR protocol. This is to avoid packets being recognized incorrectly. If the windows size is greater than half the sequence number space, then if an ACK is lost, the sender may send new packets that the receiver believes are retransmissions.
+Sender can transmit new packets as long as their number is with W of all unACKed packets.
+Sender retransmit un-ACKed packets after a timeout – Or upon a NAK if NAK is employed.
+Receiver ACKs all correct packets.
+Receiver stores correct packets until they can be delivered in order to the higher layer.
+In Selective Repeat ARQ, the size of the sender and receiver window must be at most one-half of 2^m.
+Efficiency of Selective Repeat Protocol (SRP) is same as GO-Back-N’s efficiency 
+Efficiency = N/(1+2a)
+Where a = Propagation delay / Transmission delay  
+Buffers = N + N
+Sequence number  = N(sender side)  + N  ( Receiver Side)

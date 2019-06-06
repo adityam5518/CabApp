@@ -1,0 +1,46 @@
+Server Output :-
+C:\Users\Administrator\eclipse-workspace\TCPCal\src>javac MyServer.java
+C:\Users\Administrator\eclipse-workspace\TCPCal\src>java MyServer
+Equation Received 3.0 - 6.0
+Sending the result
+Equation Received 8.0 / 2.0
+Sending the result
+Equation Received 2.45 + 1.7
+Sending the result
+Equation Received 4.5 * 2.0
+Sending the result
+
+
+
+
+Client Output :-
+C:\Users\Administrator\eclipse-workspace\TCPCal\src>javac MyClient.java
+C:\Users\Administrator\eclipse-workspace\TCPCal\src>java MyClient
+Enter Equation :
+3
+-
+6
+Answer Is : -3.0
+Do you want to continue? (Y/N)
+y
+Enter Equation :
+8
+/
+2
+Answer Is : 4.0
+Do you want to continue? (Y/N)
+y
+Enter Equation :
+2.45
++
+1.7
+Answer Is : 4.15
+Do you want to continue? (Y/N)
+y
+Enter Equation :
+4.5
+*
+2
+Answer Is : 9.0
+Do you want to continue? (Y/N)
+n

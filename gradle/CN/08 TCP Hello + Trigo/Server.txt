@@ -1,0 +1,70 @@
+Server.java :-
+import java.io.*;
+import java.net.*;
+public class Server
+{
+	ServerSocket ss;
+	Socket s;
+	DataInputStream dis;
+	DataOutputStream dos;
+	public Server()
+	{
+		int ch;
+		double ang,ans;
+		try
+		{
+			ss=new ServerSocket(4321);
+			s=ss.accept();
+			dis=new DataInputStream(s.getInputStream());
+			dos=new DataOutputStream(s.getOutputStream());
+			while(true)
+			{
+				ch=dis.readInt();
+				ang=dis.readDouble();
+				if(ch==1)
+				{
+					ans=Math.sin(ang);
+					dos.writeDouble(ans);
+				}
+				if(ch==2)
+				{
+					ans=Math.cos(ang);
+					dos.writeDouble(ans);
+				}
+				if(ch==3)
+				{
+					ans=Math.tan(ang);
+					dos.writeDouble(ans);
+				}
+				if(ch==6)
+				{
+					ans=Math.sin(ang);
+					dos.writeDouble(1/ans);
+				}
+				if(ch==5)
+				{
+					ans=Math.cos(ang);
+					dos.writeDouble(1/ans);
+				}
+				if(ch==4)
+				{
+					ans=Math.tan(ang);
+					dos.writeDouble(1/ans);
+				}
+				if(ch==7)
+				{
+					dos.flush();
+					dos.close();
+					dis.close();
+					s.close();
+					ss.close();
+				}
+			}
+		}
+		catch(Exception e) {}
+	}
+	public static void main(String[] args)
+	{
+		new Server();
+	}
+}

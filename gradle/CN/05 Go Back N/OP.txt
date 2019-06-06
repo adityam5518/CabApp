@@ -1,0 +1,50 @@
+Server Output :-
+...........Server..........
+Waiting for connection....
+Received request for sending frames
+Sending....
+sending frame no 0
+Waiting for acknowledgement
+received ack for frame no: 0 as 0
+sending frame no 1
+Waiting for acknowledgement
+received ack for frame no: 1 as 1
+sending frame no 2
+sending frame no 3
+Waiting for acknowledgement
+sending frame no 4
+Waiting for acknowledgement
+Resending frame 2
+Waiting for ack
+received ack for frame no: 2 as 2
+Resending frame 3
+Waiting for ack
+received ack for frame no: 3 as 3
+Resending frame 4
+Waiting for ack
+received ack for frame no: 4 as 4
+Quiting
+Client Output :-
+D:\CN Lab\CN Final\Sliding Window\Go Back N>java testclient
+Localhost/127.0.0.1
+.......Client........
+Connect
+Enter the number of frames to be requested to the server
+5
+Enter the type of trans. Error=1 ; No Error=0
+1
+received frame no: 0
+Sending acknowledgement for frame no: 0
+received frame no: 1
+Sending acknowledgement for frame no: 1
+Discarded frame no: 3
+Sending NEGATIVE ack
+Discarded frame no: 4
+Sending NEGATIVE ack
+received frame no: 2
+Sending acknowledgement for frame no: 2
+received frame no: 3
+Sending acknowledgement for frame no: 3
+received frame no: 4
+Sending acknowledgement for frame no: 4
+Quiting

@@ -1,0 +1,35 @@
+OSPF (Open Shortest Path First) 
+ 
+OSPF is a standardized Link-State routing protocol, designed to scale efficiently to support larger networks. 
+ 
+OSPF adheres to the following Link State characteristics: • OSPF employs a hierarchical network design using Areas. • OSPF will form neighbor relationships with adjacent routers in the same Area. • Instead of advertising the distance to connected networks, OSPF advertises the status of directly connected links using Link-State Advertisements (LSAs).  • OSPF sends updates (LSAs) when there is a change to one of its links, and will only send the change in the update. LSAs are additionally refreshed every 30 minutes. • OSPF traffic is multicast either to address 224.0.0.5 (all OSPF routers) or 224.0.0.6 (all Designated Routers). • OSPF uses the Dijkstra Shortest Path First algorithm to determine the shortest path.  • OSPF is a classless protocol, and thus supports VLSMs. 
+ 
+Other characteristics of OSPF include: • OSPF supports only IP routing. • OSPF routes have an administrative distance is 110. • OSPF uses cost as its metric, which is computed based on the bandwidth of the link. OSPF has no hop-count limit. 
+ 
+The OSPF process builds and maintains three separate tables: • A neighbor table – contains a list of all neighboring routers.  • A topology table – contains a list of all possible routes to all known networks within an area. • A routing table – contains the best route for each known network. 
+ 
+ 
+
+OSPF Neighbors 
+ 
+OSPF forms neighbor relationships, called adjacencies, with other routers in the same Area by exchanging Hello packets to multicast address 224.0.0.5. Only after an adjacency is formed can routers share routing information.  
+ 
+Each OSPF router is identified by a unique Router ID. The Router ID can be determined in one of three ways: • The Router ID can be manually specified. • If not manually specified, the highest IP address configured on any Loopback interface on the router will become the Router ID. • If no loopback interface exists, the highest IP address configured on any Physical interface will become the Router ID. 
+ 
+By default, Hello packets are sent out OSPF-enabled interfaces every 10 seconds for broadcast and point-to-point interfaces, and 30 seconds for nonbroadcast and point-to-multipoint interfaces.  
+ 
+OSPF also has a Dead Interval, which indicates how long a router will wait without hearing any hellos before announcing a neighbor as “down.” Default for the Dead Interval is 40 seconds for broadcast and point-to-point interfaces, and 120 seconds for non-broadcast and point-to-multipoint interfaces. Notice that, by default, the dead interval timer is four times the Hello interval.  
+ 
+These timers can be adjusted on a per interface basis: 
+ 
+Router(config-if)#  ip ospf hello-interval 15 Router(config-if)#  ip ospf dead-interval 60 
+ 
+ 
+
+OSPF Neighbors (continued) 
+ 
+OSPF routers will only become neighbors if the following parameters within a Hello packet are identical on each router: • Area ID • Area Type (stub, NSSA, etc.) • Prefix • Subnet Mask • Hello Interval • Dead Interval • Network Type (broadcast, point-to-point, etc.) • Authentication 
+ 
+The Hello packets also serve as keepalives to allow routers to quickly discover if a neighbor is down. Hello packets also contain a neighbor field that lists the Router IDs of all neighbors the router is connected to. 
+ 
+A neighbor table is constructed from the OSPF Hello packets, which includes the following information: • The Router ID of each neighboring router • The current “state” of each neighboring router • The interface directly connecting to each neighbor • The IP address of the remote interface of each neighbor 

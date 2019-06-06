@@ -1,0 +1,51 @@
+Server Output :-
+C:\Users\Administrator\eclipse-workspace\TCPTrigCal\src>javac Server.java
+C:\Users\Administrator\eclipse-workspace\TCPTrigCal\src>java Server
+Client Output :-
+C:\Users\Administrator\eclipse-workspace\TCPTrigCal\src>javac Client.java
+C:\Users\Administrator\eclipse-workspace\TCPTrigCal\src>java Client
+1. Sin
+2. Cos
+3. Tan
+4. Cot
+5. Sec
+6. Cosec
+7. Exit
+Enter Your Choice :
+1
+Enter Angle in Degree :
+45
+Answer Is : 0.7071067811865475
+1. Sin
+2. Cos
+3. Tan
+4. Cot
+5. Sec
+6. Cosec
+7. Exit
+Enter Your Choice :
+2
+Enter Angle in Degree :
+56
+Answer Is : 0.5591929034707468
+1. Sin
+2. Cos
+3. Tan
+4. Cot
+5. Sec
+6. Cosec
+7. Exit
+Enter Your Choice :
+3
+Enter Angle in Degree :
+60
+Answer Is : 1.7320508075688767
+1. Sin
+2. Cos
+3. Tan
+4. Cot
+5. Sec
+6. Cosec
+7. Exit
+Enter Your Choice :
+7

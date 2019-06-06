@@ -1,0 +1,17 @@
+Server Output :-
+C:\Users\Administrator\eclipse-workspace\UDPP2PChat\src>java UDPServer
+Server is running...
+Client : Hi
+Hello
+Client : How are you?
+Fine
+Terminated...
+Client Output :-
+C:\Users\Administrator\eclipse-workspace\UDPP2PChat\src>java UDPClient
+Client is running... Type 'Stop' to quit
+Hi
+Server : Hello
+How are you?
+Server : Fine
+Stop
+Terminated...
